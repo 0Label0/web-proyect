@@ -1,0 +1,39 @@
+footer {
+  position: relative;
+  width: 100%;
+  background-color: var(--backgrounds);
+  color: #fff;
+  height: auto;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 30px;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.icon-footer {
+  font-size: 25px;
+  display: inline-block;
+  margin: 5px;
+  transition: .5s;
+}
+.menu-icon {
+  color: rgba(249, 249, 249, 0.684);
+}
+.menu-icon:hover{
+  color: #fff;
+}
+
+.icon-footer:hover {
+  transform: translateY(-5px);
+}
+
+.menu-footer {
+  display: flex;
+  gap: 15px;
+}
+
+a {
+  color: #ccc;
+}

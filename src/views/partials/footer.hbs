@@ -1,0 +1,15 @@
+  <footer>
+    <div class="social-media-container">
+      <i class="fab fa-instagram icon-footer"></i>
+      <i class="fab fa-twitter icon-footer"></i>
+      <i class="fab fa-facebook icon-footer"></i>
+      <i class="fab fa-linkedin icon-footer"></i>
+      <i class="fas fa-envelope icon-footer"></i>
+    </div>
+    <ul class="menu-footer">
+      {{#each menuItems}}
+        <li><a href="{{this.link}}">{{this.text}}</a></li>
+      {{/each}}
+    </ul>
+    <p>Todos los derechos reservados</p>
+  </footer>

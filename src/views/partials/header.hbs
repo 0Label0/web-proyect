@@ -1,0 +1,26 @@
+<header>
+    <div class="header-top">
+      <div>Horario: <strong>08:00 a 18:00</strong></div>
+      <div>Oficina: <strong>Calle Inventada, 43 239899, Ciudad Inventada</strong></div>
+      <div class="social-media-container">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <i class="fas fa-bars bars"></i>
+      <h1 class="title">NombreEmpresa</h1>
+      <div>
+      </div>
+      <nav class="menu">
+        <ul>
+          {{#each menuItems}}
+            <li><a href="{{this.link}}">{{this.text}}</a> </li>
+          {{/each}}
+          <strong class="tel">644881611</strong>
+        </ul>
+      </nav>
+    </div>
+  </header>

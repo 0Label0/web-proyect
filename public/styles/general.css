@@ -1,0 +1,243 @@
+/* GENERAL STYLES */
+* {
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+
+  display: grid;
+  max-width: 100%;
+}
+
+:root {
+  --backgrounds: #007166;
+  --grey-background: #fffbfbf9;
+  --movil-adaptation-px: 800px;
+  --general-text-size: 1rem; 
+  --subtitle-text-size: 1.5rem; 
+  --title-text-size: 2.5rem; 
+  --line-height-general: 1.7; 
+  --title-color: #0f5584;
+  --title-font-size: 4rem;
+} 
+
+.start {
+  display: flex;
+  text-align: center;
+  font-size: var(--general-text-size);
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.start img {
+  width: 80%;
+  border-radius: 0 20% 20% 0;
+  height: 80%;
+}
+
+.start article {
+  margin: 50px;
+}
+
+.start article div h1 {
+  font-size: var(--title-font-size);
+  margin: 10px;
+  color: var(--title-color);
+}
+.start article div h2 {
+  font-size: var(--subtitle-text-size);
+  margin-top: 30px;
+  color: var(--title-color);
+}
+
+p {
+  line-height: var(--line-height-general);
+  font-size: var(--general-text-size);
+}
+
+.abaut-us {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey-background);
+  padding-bottom: 100px;
+}
+
+.abaut-us h2 {
+  text-align: center;
+  font-size: var(--title-text-size);
+  color: var(--title-color);
+  margin-bottom: 40px;
+  margin-top:30px;
+}
+
+.abaut-us article h3 {
+  margin: 0px;
+  text-align: center;
+  font-size: var(--subtitle-text-size);
+}
+
+.abaut-us article {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 20px;
+  font-size: var(--general-text-size);
+  gap: 20px;
+}
+.abaut-us article div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.testimonials {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.testimonials h2 {
+  font-size: var(--title-text-size);
+  color: var(--title-color);
+}
+
+.card-container {
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  align-items: center;
+  margin:10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch; 
+  scroll-behavior: smooth;
+  border-radius: 2px;
+  overscroll-behavior-x: contain;
+  overflow-x: auto;
+}
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 244, 244);
+  margin: 4px;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  min-width: 400px;
+  justify-content: center;
+  text-align: center;
+  scroll-snap-align: center;
+}
+
+.card h3 {
+  font-size: var(--subtitle-text-size);
+}
+.fa-arrow-right,
+.fa-arrow-left {
+  color: rgb(255, 189, 68);
+  font-size: 30px;
+  transition: all .3s;
+}
+
+.fa-arrow-right:hover,
+.fa-arrow-left:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color: rgb(254, 177, 35);
+}
+
+.stars-opinion div.bad {
+  color: rgb(209, 209, 209);
+}
+
+.stars-opinion div.good {
+  color: rgb(253, 153, 52);
+  font-size: larger;
+}
+
+/* SERVICES */
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.services {
+  display: flex;
+  max-width: 700px;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.services h2 {
+  font-size: var(--title-text-size);
+  color: var(--title-color);
+  margin-bottom: 30px;
+}
+.services p {
+  font-size: var(--general-text-size);
+}
+.services button {
+  width: 140px;
+  height: 80px;
+  font-size: 1.5em;
+  border: none;
+  background-color: #007166;
+  color: white;
+  font-weight: 600;
+  border-radius: 5%;
+  cursor: pointer;
+  transition: all .5s;
+}
+.services button:hover {
+  background-color: #01b9a6;
+}
+
+.idea {
+  border-radius: 50px 0 0 50px;
+  width: 40%;
+  height: 40%;
+}
+
+@media (max-width: 1250px) {
+  .start {
+    flex-wrap: wrap;
+  }
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0px;
+  }
+  .idea {
+    border-radius: 50px 0 50px 0;
+    width: 70%;
+    height: 70%;
+  }
+  .card {
+    width: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  .abaut-us article {
+    grid-template-columns: auto;
+  }
+  .services {
+    font-size: var(--general-text-size);
+    display: flex;
+  }
+  .start article div h1 {
+    font-size: 3em;
+  }
+}
