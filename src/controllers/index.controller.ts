@@ -1,7 +1,5 @@
 import { Request, Response } from "express";
-import { link } from "fs";
 import path from "path";
-import { text } from "stream/consumers";
 
 const controllers = {
   home: (_: Request, res: Response) => {
