@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import routes from './routes/index.routes';
+import routes from './index.routes';
 import path from 'path';
 import { engine } from 'express-handlebars';
 

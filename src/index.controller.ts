@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import connection from "./db";
 import path from "path";
 
 const controllers = {
@@ -26,7 +27,13 @@ const controllers = {
     });
   },
 
-  galery: (_: Request, res: Response) => {
+  galery: async(_: Request, res: Response) => {
+    connection.query('SELECT * FROM products', (err, products)=> {
+      if (err) {
+        return res.status(500).send('Error en la consulta');
+      }
+      res.json(products);
+    });
     res.render('templates/galery', {
       layout: 'main',
       menuItems: [
